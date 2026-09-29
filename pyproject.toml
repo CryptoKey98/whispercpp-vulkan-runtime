@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whispercpp-vulkan-runtime"
+version = "1.8.5.1"
+description = "Windows x64 Vulkan whisper.cpp CLI runtime built from upstream v1.8.5"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.urls]
+Repository = "https://github.com/CryptoKey98/whispercpp-vulkan-runtime"
+
+[project.scripts]
+whispercpp = "whispercpp_runtime:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+whispercpp_runtime = ["bin/*"]
